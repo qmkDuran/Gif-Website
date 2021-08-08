@@ -1,0 +1,121 @@
+
+// /SASS COLORS
+$primary-color: rgb(20, 20, 20);
+$secondary-color: white;
+:root {
+    --gradient: linear-gradient(150deg, rgb(204, 5, 204), #f57f6f,rgb(253, 70, 244));
+}
+// Mixins
+@mixin auto {
+    margin-left:auto;
+    margin-right:auto;
+}
+
+@mixin font {
+    font-family: "Helvetica Neue", helvetica, sans-serif;
+}
+
+
+// **************************************************************************************
+// **************************************************************************************
+
+ 
+
+    h1 {
+        @include auto;
+        @include font;
+        width: 275px;
+        color: transparent;
+        -webkit-text-stroke:.5px $secondary-color;
+        background-size: 700%;
+        background-image: var(--gradient);
+        -webkit-background-clip: text;
+        animation: bg-animation 20s infinite;
+        letter-spacing: 1px;
+    }
+
+    html{
+        margin: 0px;
+    }
+
+    .container {
+        width: 680px;
+        margin: auto;
+        column-count: 4;
+        column-gap: 0px;
+    }
+
+    body {
+        background-color: $primary-color;
+    }
+
+    #search {
+        width: 10em;
+        text-align: center;
+        margin-right: -.3em;
+    }
+
+    .box {
+        @include auto;
+        width:250px;
+    }
+
+    input:focus {
+        color: $primary-color;
+        outline: none;
+    }
+
+    input {
+        margin-bottom: 2em;
+        padding-top: 3.2px;
+        padding-bottom: 1.40px;
+        background-color: $secondary-color;
+        border: none;
+    }
+
+    button {
+        padding-top: 3.2px;
+        padding-bottom: 1.45px;
+        padding-left: em;
+        background-color: $secondary-color;
+        background-size: 700%;
+        background-image: var(--gradient);
+        animation: bg-animation 20s infinite;
+        border: none;  
+        color: $secondary-color;
+        font-weight: bold;
+        letter-spacing: 1px;
+        text-shadow: 0px 0px 4px black;
+    }
+
+    @keyframes bg-animation {
+        0% {background-position: left}
+        50% {background-position: right}
+        100% {background-position: left}
+    }
+
+    img {
+        @include auto;
+        width: 10em;
+        border-radius: 3px;
+        margin-bottom: 6px;
+    }
+
+    p {
+        font-family: "Helvetica Neue", helvetica, sans-serif;
+        margin-top: 1em;
+        margin-right: 4.57em;
+        color: gray;
+        position: fixed;
+        top: 0;
+        right: 0;
+      }
+      
+      #logo {
+        margin-top: 2.5em;
+        margin-right: 4em;
+        position: fixed;
+        top: 0;
+        right: 0;
+      }
+

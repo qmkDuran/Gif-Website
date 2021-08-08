@@ -1,0 +1,111 @@
+:root {
+  --gradient: linear-gradient(150deg, rgb(204, 5, 204), #f57f6f,rgb(253, 70, 244));
+}
+
+h1 {
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Helvetica Neue", helvetica, sans-serif;
+  width: 275px;
+  color: transparent;
+  -webkit-text-stroke: 0.5px white;
+  background-size: 700%;
+  background-image: var(--gradient);
+  -webkit-background-clip: text;
+  animation: bg-animation 20s infinite;
+  letter-spacing: 1px;
+}
+
+html {
+  margin: 0px;
+}
+
+.container {
+  width: 680px;
+  margin: auto;
+  column-count: 4;
+  column-gap: 0px;
+}
+
+body {
+  background-color: #141414;
+}
+
+#search {
+  width: 10em;
+  text-align: center;
+  margin-right: -0.3em;
+}
+
+.box {
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+}
+
+input:focus {
+  color: #141414;
+  outline: none;
+}
+
+input {
+  margin-bottom: 2em;
+  padding-top: 3.2px;
+  padding-bottom: 1.4px;
+  background-color: white;
+  border: none;
+}
+
+button {
+  padding-top: 3.2px;
+  padding-bottom: 1.45px;
+  padding-left: em;
+  background-color: white;
+  background-size: 700%;
+  background-image: var(--gradient);
+  animation: bg-animation 20s infinite;
+  border: none;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-shadow: 0px 0px 4px black;
+}
+
+@keyframes bg-animation {
+  0% {
+    background-position: left;
+  }
+  50% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
+  }
+}
+img {
+  margin-left: auto;
+  margin-right: auto;
+  width: 10em;
+  border-radius: 3px;
+  margin-bottom: 6px;
+}
+
+p {
+  font-family: "Helvetica Neue", helvetica, sans-serif;
+  margin-top: 1em;
+  margin-right: 4.57em;
+  color: gray;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+#logo {
+  margin-top: 2.5em;
+  margin-right: 4em;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+/*# sourceMappingURL=styles.css.map */
